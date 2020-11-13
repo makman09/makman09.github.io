@@ -241,17 +241,24 @@
         <section id='projects' class='mb-4 pb-4'>
             <div class='container'>
                 <h2 class='primary'><code class='accent'>03.</code>&nbsp;&nbsp;Projects</h2>
-                <div>
-                    <h3>David Attenborough Text 2 Speech AI</h3>
-                    <code class='text-primary mr-1'>#PyTorch</code>
-                    <code class='text-primary mr-1'>#CUDA</code>
-                    <code class='text-primary mr-1'>#CloudLambda</code>
                     <div class='row'>
                         <div class="col-12 col-md-6">
-                            <img class='w-50 d-block mx-auto rounded' src="DavidAttnTTS.png" class="img-thumbnail" alt="Responsive image">
-                            <p>
+                            <h3>David Attenborough Text 2 Speech Synthesis</h3>
+                            <img class='my-4 w-50 d-block mx-auto rounded' src="DavidAttnTTS.png" class="img-thumbnail" alt="Responsive image">
+                            <div class='d-block'>
+                                <code class='text-primary mr-1'>#PyTorch</code>
+                                <code class='text-primary mr-1'>#CUDA</code>
+                                <code class='text-primary mr-1'>#CloudLambda</code>
+                                <a class="btn btn-sm btn-outline-primary" href="https://github.com/makman09/text-2-speech-engine">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                            </div>
+                            <p class='mt-3'>
                                 I took Nvidia's implementation of <a href="https://github.com/NVIDIA/tacotron2">Tacotron2</a> to train a deep neural network over 20 hours of labeled audio transcript data of David Attenborough to generate speech audio in very high likeness of his voice. 
-                                <br><br>
+                            </p>
+                        </div>
+                        <div class='col-12 col-md-6'>
+                            <p>
                                 If you can't believe me, could you ever imagine him saying the following things below?
                             </p>
                             <audio controls>
@@ -266,17 +273,16 @@
                                 <source src="david_attn_3.wav" type="audio/wav">
                                 Your browser does not support the audio element.
                             </audio>
-                        </div>
-                        <div class='col-12 col-md-6'>
-                            <div>
+                            <p class='mt-3'>
                                 In order to generate his voice model for speech synthesis, I need to collect and clean a large amount of voice data that is clean, audible, and free of foreign noise artifacts. A lot of quality audio sample of David Attenborough's voice can be found in AudioBook which can be extracted as audio sources.
-                                <br><br>
+                            </p>
+                            <p>
                                 In order to generate audio transcripts of the audio samples, I used <a href="https://github.com/jiaaro/pydub/">PyDub</a> in order to detect silence long enough in the audio samples to split over into smaller audo pieces. I used QuartzNet model from <a href="https://github.com/NVIDIA/NeMo">Nvidia's NeMo Conversational AI toolkit</a> to transcribe the audio speech into text.
-                                <br><br>
+                            </p>
+                            <p>
                                 Training a deep neural network is something that can't be rushed easily unless you have a large amount of capital for large GPU cloud servers. I trained it on a 4-GPU instance at <a href="https://lambdalabs.com/service/gpu-cloud">Lambda GPU Cloud</a> for $1.50 per hour. The training took 4 days to finish.     
-                            </div>
+                            </p>
                         </div>
-                    </div>
                 </div>
             </div>
         </section>
