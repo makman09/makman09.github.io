@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50" class='bg-dark-blue'>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark-blue">
+        <a class="navbar-brand" href="#"><code>MAK<span class='accent'>III</span></code></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse bg-dark-blue" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about-me"><code>About Me</code></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience"><code>Experience</code></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects"><code>Projects</code></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact"><code>Contact</code></a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+    <main class='container'>
+        <section id="intro" class='min-vh-100 w-100 d-flex flex-column align-items-center justify-content-center '>
+            <div class=''>
+                <code class='accent h6'>Hi, my name is</code>
+                <h1 class='display-3 font-weight-bold primary'>
+                    Mustafa A. Khan III
+                </h1>
+                <h2 class='display-4 font-weight-bold '>
+                    I build & deploy micro-services and web apps on the ☁️
+                </h2>
+                <p class="w-50">
+                    I'm a full-stack engineer based in San Diego, CA who specializes in developing scalable software systems on the cloud.
+                </p>
+                <button type="button" class="btn btn-outline-primary"><code class='primary'>Get In Touch</code></button>
+            </div>
+        </section>
+        <section id="about-me" class='my-5 py-5'>
+            <div class='container'>
+                <h2 class='primary'><code class='accent'>01.</code>&nbsp;&nbsp;About Me</h2>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <p>
+                            I'm a Full-Stack Engineer based in San Diego who can build scalable software systems on the cloud whether its web apps or micro-service.
+                            <br>
+                            <br>
+                            I graduated at <a href="https://www.google.com/search?client=safari&rls=en&q=uc+san+diego&ie=UTF-8&oe=UTF-8">UC San Diego</a> with a B.S in Computer Science w/ Specialization in Bio-informatics. The degree name is fancy talk for I studied machine learning
+                            and statistics within the biological domain along with software engineering.
+                            <br>
+                            <br>
+                            I play with a wide variety of technologies around different ends of the tech-stack.
+                        </p>
+                        <ul class='d-inline-block'>
+                            <li>
+                                Django 
+                            </li>
+                            <li>
+                                Flask
+                            </li>
+                            <li>
+                                Angular
+                            </li>
+                        </ul>
+                        <ul class='d-inline-block'>
+                            <li>
+                                React 
+                            </li>
+                            <li>
+                                AWS
+                            </li>
+                            <li>
+                                Google Cloud
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="me.png" class="img-fluid" alt="Responsive image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id='experience' class='my-4 py-4'>
+            <div class='container w-lg-75'>
+                <h2 class='primary'><code class='accent'>02.</code>&nbsp;&nbsp;Where I worked</h2>
+				<div class="row mt-3 pt-3">
+				  <div class="col-12 col-md-3">
+				    <div class="nav flex-column nav-pills mb-2" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+				      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">DTU</a>
+				      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Re-Hinged</a>
+				      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Guardiome</a>
+				      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">KnuEdge</a>
+				    </div>
+				  </div>
+				  <div class="col-12 col-md-9">
+				    <div class="tab-content" id="v-pills-tabContent">
+				      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <h4>Senior Full-Stack Engineer <span class='accent'>@ DTU</span></h4>
+                            <code>Dec-2019 to Aug-2020</code>
+                            <p>
+                                Prototyped and productionized a web tool for curating visual network graphs of
+                                biological & chemical entities along with their interactions/pathways from large
+                                public datasets like NCBI, UniProt, & PubMed and vast research literature.
+                            </p>
+                            <ul>
+                                <li>
+                                    Utilized vis.js, d3.js, & RxJS to build a drawing tool for constructing interactive network
+                                    maps of the pathways/relationships between biological/chemical entities.
+                                </li>
+                                <li>
+                                    Improve REST API performance by shifting compute intesive tasks from web server
+                                    worker threads to task queue using Celery.
+                                </li>
+                                <li>
+                                    Refactored Angular codebase from tightly integrated ui elements that were needlessly duplicated
+                                    many times in the app with inconsistent styling into a re-usable and composable ui components
+                                    kit built on top of Bootstrap.
+                                </li>
+                            </ul>
+                            <code class='text-warning mr-1'>#Angular</code>
+                            <code class='text-warning mr-1'>#D3</code>
+                            <code class='text-warning mr-1'>#Bootstrap</code>
+                            <code class='text-success mr-1'>#Flask</code>
+                            <code class='text-success mr-1'>#Celery</code>
+                            <code class='text-primary mr-1'>#GoogleCloud</code>
+                            <code class='text-primary mr-1'>#Docker</code>
+				      </div>
+				      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                        <h4>Full-Stack Engineer <span class='accent'>@ Re-Hinged</span></h4>
+                        <code>July-2018 to Nov-2019</code>
+                        <p>
+                            I led technical development of web apps which utilized data visualizations to
+                            commincate business insights and market intelligence.
+                        </p>
+                        <ul>
+                            <li>
+                                Reduced cloud bill for web apps by 30% through refactoring cloud architecture from
+                                monolith to that of micro-services. Used AWS Elastic Container Service to orchestrate
+                                containers and auto-scale appropiately on reserved and spot instances with discount
+                                pricing.
+                            </li>
+                            <li>
+                                Built CI/CD pipeline to handle continuous merging and shipping of new app features
+                                between multiple developer teams of different time zones while also ensuring few or no
+                                bugs escape to production with checks such as unit testing, code linting, and successful
+                                compilation.
+                            </li>
+                            <li>
+                                Utilized D3.js and Highcharts.js to build data-driven dahboards that are integrated with
+                                NLP pipelines to visualize market sentiment reactions around entities such as brands,
+                                products, or technologies.                                
+                            </li>
+                        </ul>
+                        <code class='text-warning mr-1'>#Angular</code>
+                        <code class='text-warning mr-1'>#D3</code>
+                        <code class='text-warning mr-1'>#Highcharts.js</code>
+                        <code class='text-success mr-1'>#Django</code>
+                        <code class='text-success mr-1'>#ElasticSearch</code>
+                        <code class='text-primary mr-1'>#AWS</code>
+                        <code class='text-primary mr-1'>#Docker</code>
+                    </div>
+				      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                          <h4>Product Engineer <span class='accent'>@ Guardiome</span></h4>
+                          <code>Apr-2017 to Apr-2018</code>
+                          <p>
+                            I pivoted product development of a clinical genome/transcriptome explorer to a collection of omics clinical analysis apps built on top of Omics SDK. 
+                          </p>
+                          <ul>
+                              <li>
+                                Collaborated on Omics Software Development Kit's design/implementation which allows developers to build clinical analysis reports around an user's genome and transcriptome. 
+                              </li>
+                              <li>
+                                Refactored python bioinformatics pipelines into distribute apps developed on top of the Omics SDK.                                  
+                              </li>
+                              <li>
+                                Re-designed the UI and impleneted it with Material Design UI components library to allow easier information digestion of genetics insights and analysis.                                   
+                              </li>
+                          </ul>
+                          <code class='text-warning mr-1'>#React</code>
+                          <code class='text-warning mr-1'>#Material-UI</code>
+                          <code class='text-warning mr-1'>#Electron</code>
+                          <code class='text-success mr-1'>#Flask</code>
+                          <code class='text-success mr-1'>#Conda</code>
+                          <code class='text-primary mr-1'>#AWS</code>
+                          <code class='text-primary mr-1'>#Docker</code>
+                        </div>
+				      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                          <h4>Software Engineer <span class='accent'>@ KnuEdge</span></h4>
+                          <code>Apr-2016 to Apr-2018</code>
+                          <p>
+                            I contributed to the front-end developent of machine learning web app which allowed end users to build machine learing algorithm on proprietary data. 
+                          </p>
+                          <ul>
+                              <li>
+                                Implemented visualization components such as line charts on top of D3 and web socket for real-time data streaming/visualizing.
+                              </li>
+                              <li>
+                                Integrated PlumbJS library into a web app to build a drag & drop interface for creating graph networks that represent machine learning algorithms.
+                              </li>
+                          </ul>
+                          <code class='text-warning mr-1'>#Angular</code>
+                          <code class='text-warning mr-1'>#Material-UI</code>
+                          <code class='text-warning mr-1'>#PlumbJS</code>
+                          <code class='text-warning mr-1'>#D3.js</code>
+                        </div>
+				    </div>
+				  </div>
+				</div>
+            </div>
+        </section>
+        <section id='projects' class='my-4 py-4'>
+            <div class='container'>
+                <h2 class='primary'><code class='accent'>03.</code>&nbsp;&nbsp;Projects</h2>
+                <div>
+                    <h3>David Attenborough Text 2 Speech AI</h3>
+                    <code class='text-primary mr-1'>#PyTorch</code>
+                    <code class='text-primary mr-1'>#CUDA</code>
+                    <code class='text-primary mr-1'>#CloudLambda</code>
+                    <div class='row'>
+                        <div class='col-sm'>
+                            <img class='w-50 d-block mx-auto rounded' src="DavidAttnTTS.png" class="img-thumbnail" alt="Responsive image">
+                            <p>
+                                I took Nvidia's implementation of <a href="https://github.com/NVIDIA/tacotron2">Tacotron2</a> to train a deep neural network over 20 hours of labeled audio transcript data of David Attenborough to generate speech audio in very high likeness of his voice. 
+                                <br><br>
+                                If you can't believe me, could you ever imagine him saying the following things below?
+                            </p>
+                            <audio controls>
+                                <source src="speech.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class='col-sm'>
+                            <div>
+                                In order to generate his voice model for speech synthesis, I need to collect and clean a large amount of voice data that is clean, audible, and free of foreign noise artifacts. A lot of quality audio sample of David Attenborough's voice can be found in AudioBook which can be extract as audio sources.
+                                <br><br>
+                                In order to generate audio transcripts of the audio samples, I used <a href="https://github.com/jiaaro/pydub/">PyDub</a> in order to detect silence long enough in the audio samples to split over into smaller audo pieces. I used QuartzNet model from <a href="https://github.com/NVIDIA/NeMo">Nvidia's NeMo Conversational AI toolkit</a> to transcribe the audio speech into text.
+                                <br><br>
+                                Training a deep neural network is something that can't be rushed easily unless you have a large amount of capital for large GPU cloud servers. I trained it on a 4-GPU instance at <a href="https://lambdalabs.com/service/gpu-cloud">Lambda GPU Cloud</a> for $1.50 per hour. The training took 4 days to finish.     
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id='contact' class=''>
+            <div class='container'>
+                <h2 class='primary'><code class='accent'>04.</code>&nbsp;&nbsp;Contact</h2>
+                <div class='container d-flex flex-column justify-content-center align-items-center' style="width: max-content;">
+                    <h2 class='display-6'>Get in touch</h2>
+                    <p>
+                        Currently in the search for software engineering opportunities either in San Diego or remote.
+                    </p>
+                    <a href="mailto:makman09@gmail.com" class="btn btn-outline-primary btn-lg" role="button">
+                        Contact
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- jQuery and JS bundle w/ Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function(event) {
+            $('body').scrollspy({ target: '.navbar' })
+        });
+    </script>
+
+</body>
+
+</html>

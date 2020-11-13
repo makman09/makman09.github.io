@@ -1,0 +1,76 @@
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+html {
+    scroll-behavior: smooth;
+    background-color: #0D192D;
+}
+
+/**
+ * Extra small devices (portrait phones, less than 576px)
+ * No media query for `xs` since this is the default in Bootstrap
+ */
+
+/** Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/** Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .w-md-75 {
+        width: 75% !important;
+    }
+}
+
+/** Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .w-lg-75 {
+        width: 75% !important;
+    }
+}
+
+@media (min-width: 1200px) {
+
+}
+  
+.bg-dark-blue {
+    background-color: #0D192D;
+}
+.border-dark-blue  {
+    border-color: #0D192D;
+}
+
+.primary {
+    color: #CED6F3;
+}
+.accent {
+    color: #8EF6D8;
+}
+
+h1,h2,h3,h4,h5,h6,p,span,div {
+    color: #8A92AD;
+}
+
+#intro > div {
+    max-width: 80vh;
+}
+
+#about-me li {
+    list-style-type: "👉" !important;
+    padding-inline-start: 1ch !important;
+}
+  
+#about-me li::marker {
+    content: "👉" !important;
+    padding-inline-start: 1ch !important;
+}
+
+#experience li {
+    list-style-type: " 🤟" !important;
+    padding-inline-start: 1ch !important;
+    margin-bottom: 1ch;
+}
+  
+#experience li::marker {
+    content: " 🤟" !important;
+    padding-inline-start: 1ch !important;
+}
