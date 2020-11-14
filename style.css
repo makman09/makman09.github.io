@@ -78,6 +78,37 @@ div {
     padding-inline-start: 1ch !important;
 }
 
+/* ---- grid ---- */
+
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-item {
+    width: 20%;
+}
+.grid-item.width-2 {
+    width: 40%;
+}
+
+
+.grid-item {
+    float: left;
+}
+
+.grid-item img {
+    display: block;
+    max-width: 100%;
+}
+
+
+
 #experience li {
     list-style-type: " 🤟" !important;
     padding-inline-start: 1ch !important;
@@ -93,23 +124,25 @@ div {
 
 
 #david-attn-1 {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('david-attn-1.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/david-attn-1.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     overflow: hidden;
     height: 200px;
 }
+
 #david-attn-2 {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('david-attn-2.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/david-attn-2.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     overflow: hidden;
     height: 200px;
 }
+
 #david-attn-3 {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('david-attn-3.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/david-attn-3.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -128,6 +161,7 @@ div {
     transform: scale(1.1);
     cursor: pointer;
 }
+
 .togglePlay:hover {
     transform: scale(1.5);
     transition: all .2s ease-in-out;

@@ -81,31 +81,125 @@
                             <br>
                             I play with a wide variety of technologies around different ends of the tech-stack.
                         </p>
-                        <ul class='d-inline-block'>
-                            <li>
-                                Django 
-                            </li>
-                            <li>
-                                Flask
-                            </li>
-                            <li>
-                                Angular
-                            </li>
-                        </ul>
-                        <ul class='d-inline-block'>
-                            <li>
-                                React 
-                            </li>
-                            <li>
-                                AWS
-                            </li>
-                            <li>
-                                Google Cloud
-                            </li>
-                        </ul>
+                        <div class='row'>
+                            <div class="col-6">
+                                <h4 class='text-warning'>Front-End</h4>
+                                <ul class='list-unstyled'>
+                                    <li>
+                                        <code class='text-warning'>Javascript</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-warning'>Typescript</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-warning'>Angular</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-warning'>React</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-warning'>jQuery</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-warning'>rxjs</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-warning'>d3.js</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-warning'>cytoscape.js</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-warning'>HTML5/CSS3</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-warning'>SASS</code>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class='col-6'>
+                                <h4 class='text-success'>Back-End</h4>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <code class='text-success'>Python</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-success'>Flask</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-success'>Django</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-success'>Django Rest Framework</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-success'>Celery</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-success'>Jupyter</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-success'>Conda</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-success'>PyTorch</code>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class='row'>
+                            <div class='col-6'>
+                                <h4 class='text-danger'>Data Storage</h4>
+                                <ul class='list-unstyled'>
+                                    <li>
+                                        <code class='text-danger'>Redis</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-danger'>ElasticSearch</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-danger'>PostgreSQL</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-danger'>MySQL</code>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class='col-6'>
+                                <h4 class='text-primary'>
+                                    Dev Ops
+                                </h4>
+                                <ul class='list-unstyled'>
+                                    <li>
+                                        <code class='text-primary'>AWS</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-primary'>Google Cloud</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-primary'>Docker</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-primary'>Kubernetes</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-primary'>NGINX</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-primary'>Travis CI</code>
+                                    </li>
+                                    <li>
+                                        <code class='text-primary'>Github Actions</code>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="me.png" class="img-fluid rounded" alt="Responsive image">
+                        <img src="img/me.png" class="img-fluid rounded" alt="Responsive image">
                     </div>
                 </div>
             </div>
@@ -323,13 +417,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
+    <script src="img/tech/https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
     <script>
         $(document).ready(function(event) {
             $('body').scrollspy({ target: '.navbar' })
         });
+
+        $('.grid').packery({
+            // options
+            itemSelector: '.grid-item',
+            horizontalOrder: true
+        });
     </script>
     <script>
-
         const elements = [
             'da-audio-1',
             'da-audio-2',
