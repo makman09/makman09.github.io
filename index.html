@@ -243,8 +243,26 @@
                 <h2 class='primary'><code class='accent'>03.</code>&nbsp;&nbsp;Projects</h2>
                     <div class='row'>
                         <div class="col-12 col-md-6">
-                            <h3>David Attenborough Text 2 Speech Synthesis</h3>
-                            <img class='my-4 w-50 d-block mx-auto rounded' src="DavidAttnTTS.png" class="img-thumbnail" alt="Responsive image">
+                            <h3 class='accent'>David Attenborough Text 2 Speech Synthesis</h3>
+
+
+                            <div id='david-attn-1' class="audio-player my-3 d-flex flex-column justify-content-center align-items-center">
+                                <audio id="da-audio-1" src="david_attn_1.wav"></audio>
+                                <i id="audio-1" class="fas fa-play fa-2x accent togglePlay" onclick="togglePlay()"></i>
+                                <div class="align-self-start progress-audio mt-5" id="progress-da-audio-1"></div>
+                            </div>
+                            <div id='david-attn-2' class="audio-player my-3 d-flex flex-column justify-content-center align-items-center">
+                                <audio id="da-audio-2" src="david_attn_2.wav"></audio>
+                                <i id="audio-2" class="fas fa-play fa-2x accent togglePlay" onclick="togglePlay()"></i>
+                                <div class="align-self-start progress-audio mt-5" id="progress-da-audio-2"></div>
+                            </div>
+                            <div id='david-attn-3' class="audio-player my-3 d-flex flex-column justify-content-center align-items-center">
+                                <audio id="da-audio-3" src="david_attn_3.wav"></audio>
+                                <i id="audio-3" class="fas fa-play fa-2x accent togglePlay" onclick="togglePlay()"></i>
+                                <div class="align-self-start progress-audio mt-5" id="progress-da-audio-3"></div>
+                            </div>
+
+
                             <div class='d-block'>
                                 <code class='text-primary mr-1'>#PyTorch</code>
                                 <code class='text-primary mr-1'>#CUDA</code>
@@ -253,34 +271,30 @@
                                     <i class="fa fa-github"></i>
                                 </a>
                             </div>
+                        </div>
+                        <div class='col-12 col-md-6'>
                             <p class='mt-3'>
                                 I took Nvidia's implementation of <a href="https://github.com/NVIDIA/tacotron2">Tacotron2</a> to train a deep neural network over 20 hours of labeled audio transcript data of David Attenborough to generate speech audio in very high likeness of his voice. 
                             </p>
-                        </div>
-                        <div class='col-12 col-md-6'>
+                            <h3 class='text-primary'>Data</h3>
                             <p>
-                                If you can't believe me, could you ever imagine him saying the following things below?
-                            </p>
-                            <audio controls>
-                                <source src="david_attn_1.wav" type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                            <audio controls>
-                                <source src="david_attn_2.wav" type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                            <audio controls>
-                                <source src="david_attn_3.wav" type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                            <p class='mt-3'>
-                                In order to generate his voice model for speech synthesis, I need to collect and clean a large amount of voice data that is clean, audible, and free of foreign noise artifacts. A lot of quality audio sample of David Attenborough's voice can be found in AudioBook which can be extracted as audio sources.
+                                In order to generate his voice model for speech synthesis, 
+                                I needed a large amount of labled voice data that is clean, audible, and free of foreign noise artifacts. 
+                                I extracted a lot of quality audio sample of David Attenborough's voice from audiobooks where he narrates.
                             </p>
                             <p>
-                                In order to generate audio transcripts of the audio samples, I used <a href="https://github.com/jiaaro/pydub/">PyDub</a> in order to detect silence long enough in the audio samples to split over into smaller audo pieces. I used QuartzNet model from <a href="https://github.com/NVIDIA/NeMo">Nvidia's NeMo Conversational AI toolkit</a> to transcribe the audio speech into text.
+                                In order to generate labeled data from the audio samples, I used <a href="https://github.com/jiaaro/pydub/">PyDub</a> in 
+                                order to detect silence long enough in the audio samples to split over into smaller audio pieces.
+                                I then used QuartzNet model from <a href="https://github.com/NVIDIA/NeMo">Nvidia's NeMo Conversational AI toolkit</a> to transcribe the audio speech into text.
+                            </p>
+                            <h3 class='text-primary'>Training</h3>
+                            <p>
+                                I trained it on a 4-GPU instance at <a href="https://lambdalabs.com/service/gpu-cloud">Lambda GPU Cloud</a> for $1.50 per hour.
                             </p>
                             <p>
-                                Training a deep neural network is something that can't be rushed easily unless you have a large amount of capital for large GPU cloud servers. I trained it on a 4-GPU instance at <a href="https://lambdalabs.com/service/gpu-cloud">Lambda GPU Cloud</a> for $1.50 per hour. The training took 4 days to finish.     
+                                The training was done over a week in sessions where after each session 
+                                I monitor the progress of the training and tune the hyper-parameters to improve the loss curve.
+                                Training in total took a total of around 80 hours to get to this level of voice quality.     
                             </p>
                         </div>
                 </div>
@@ -290,8 +304,8 @@
             <div class='container'>
                 <h2 class='primary'><code class='accent'>04.</code>&nbsp;&nbsp;Contact</h2>
                 <div class='d-flex flex-column justify-content-center align-items-center' style="height: 50vh;">
-                    <h2 class='display-4'>Get in touch</h2>
-                    <p>
+                    <h2 class='display-4 accent'>Get in touch</h2>
+                    <p class='text-center text-white'>
                         Currently in the search for software engineering opportunities either in San Diego or remote.
                     </p>
                     <a href="mailto:makman09@gmail.com" class="btn btn-outline-primary btn-lg" role="button">
@@ -313,6 +327,64 @@
         $(document).ready(function(event) {
             $('body').scrollspy({ target: '.navbar' })
         });
+    </script>
+    <script>
+
+        const elements = [
+            'da-audio-1',
+            'da-audio-2',
+            'da-audio-3'
+        ];
+
+        elements.forEach(elem => {
+            var timer;
+            var percent = 0;
+            var audio = document.getElementById(elem);
+
+            audio.addEventListener(
+                "playing",
+                function(_event) {
+                    var duration = _event.target.duration;
+                    advance(duration, audio);
+                }
+            );
+
+            audio.addEventListener(
+                "pause",
+                function(_event) {
+                    clearTimeout(timer);
+                }
+            );
+
+            var advance = function(duration, element) {
+                var progress = document.getElementById(`progress-${elem}`);
+                increment = 10/duration
+                percent = Math.min(increment * element.currentTime * 10, 100);
+                progress.style.width = percent+'%'
+                startTimer(duration, element);
+            }
+            var startTimer = function(duration, element){ 
+                if(percent < 100) {
+                    timer = setTimeout(function (){advance(duration, element)}, 100);
+                }
+            }
+        });
+
+        function togglePlay (e) {
+            e = e || window.event;
+
+            var audio = document.getElementById(`da-${e.target.id}`);
+            var btn = e.target;
+            if (!audio.paused) {
+                audio.pause();
+                btn.classList.remove('fa-pause')
+                btn.classList.add('fa-play')
+            } else {
+                audio.play();
+                btn.classList.remove('fa-play')
+                btn.classList.add('fa-pause')
+            }
+        }
     </script>
 
 </body>

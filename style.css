@@ -10,9 +10,7 @@ html {
  */
 
 /** Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-
-}
+@media (min-width: 576px) {}
 
 /** Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -26,34 +24,47 @@ html {
     .w-lg-80 {
         width: 80% !important;
     }
+
     .w-lg-50 {
         width: 50% !important;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) {}
 
-}
-  
+/** coloring and font */
+
 .bg-dark-blue {
     background-color: #0D192D;
 }
-.border-dark-blue  {
+
+.border-dark-blue {
     border-color: #0D192D;
 }
 
 .primary {
     color: #CED6F3;
 }
+
 .accent {
     color: #8EF6D8;
 }
 
-h1,h2,h3,h4,h5,h6,p,span,div {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div {
     color: #8A92AD;
 }
 
-#intro > div {
+/** Section styling */
+
+#intro>div {
     max-width: 80vh;
 }
 
@@ -61,7 +72,7 @@ h1,h2,h3,h4,h5,h6,p,span,div {
     list-style-type: "👉" !important;
     padding-inline-start: 1ch !important;
 }
-  
+
 #about-me li::marker {
     content: "👉" !important;
     padding-inline-start: 1ch !important;
@@ -72,8 +83,52 @@ h1,h2,h3,h4,h5,h6,p,span,div {
     padding-inline-start: 1ch !important;
     margin-bottom: 1ch;
 }
-  
+
 #experience li::marker {
     content: " 🤟" !important;
     padding-inline-start: 1ch !important;
+}
+
+/** Audio progess */
+
+
+#david-attn-1 {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('david-attn-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    height: 200px;
+}
+#david-attn-2 {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('david-attn-2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    height: 200px;
+}
+#david-attn-3 {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('david-attn-3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    height: 200px;
+}
+
+.progress-audio {
+    width: 0px;
+    height: 1px;
+    background: #8EF6D8;
+    transition: width .1s linear;
+}
+
+.togglePlay {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.togglePlay:hover {
+    transform: scale(1.5);
+    transition: all .2s ease-in-out;
 }
