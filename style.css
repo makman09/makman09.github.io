@@ -62,6 +62,19 @@ div {
     color: #8A92AD;
 }
 
+.text-primary {
+    color: #7fbdff !important;
+}
+.text-warning {
+    color: #ffe083 !important;
+}
+.text-danger {
+    color: #ed99a1 !important;
+}
+.text-success {
+    color: #84e19a !important;
+}
+
 /** Section styling */
 
 #intro>div {
